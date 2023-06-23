@@ -32,14 +32,14 @@ function equalityCheck () {     // Equality check TEST
         // clearTimeout (timerId);
     }   else {
         if ( playerGuess < randomNumber ) {
-            playerTip = "It's higher than " + playerGuess;
-            {
+                playerTip = "It's higher than " + playerGuess;
+                {
         if ( playerGuess > randomNumber ) {
-            playerTip = "It's lower than " + playerGuess;       
-            }
+                playerTip = "It's lower than " + playerGuess;       
+                }
         if (isNaN (playerGuess)) {
-            playerTip = "Enter a number between 1 & 10";
-            }    
+                playerTip = "Enter a number between 1 & 10";
+                }    
     }
     return
 }
