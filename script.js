@@ -30,7 +30,18 @@ function equalityCheck () {     // Equality check TEST
         playerTip = "Correct, click to play again";
         document.getElementById("playButton").value = "Play now";
         // clearTimeout (timerId);
+    }   else {
+        if ( playerGuess < randomNumber ) {
+            playerTip = "It's higher than " + playerGuess;
+            {
+        if ( playerGuess > randomNumber ) {
+            playerTip = "It's lower than " + playerGuess;       
+            }
+        if (isNaN (playerGuess)) {
+            playerTip = "Enter a number between 1 & 10";
+            }    
     }
+    return
 }
 
 function updateHtmlContent () {     // Updates the HTML page
