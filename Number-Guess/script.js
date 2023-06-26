@@ -12,7 +12,7 @@ function gameLoop () {
     randomNumber = 5; //debug only
     equalityCheck ();
     updateHtmlContent ();
-    //secondCountDown();
+    secondCountDown();
 }
 
 function generateRandomNumber () {    // Generate random number TEST
@@ -21,27 +21,28 @@ function generateRandomNumber () {    // Generate random number TEST
     // alert (randomNumber) creates an alert of line 19 (playerScore)
 }
 
-function equalityCheck () {     // Equality check TEST
-    playerGuess = document.getElementById("playerGuessInput").value;
-    playerGuess = Number (playerGuess)
-    if (playerGuess === randomNumber) {
-        currentSecond = 11;
-        playerScore = playerScore +1;
-        playerTip = "Correct, click to play again";
-        document.getElementById("playButton").value = "Play now";
-        // clearTimeout (timerId);
-    }   else {
-        if ( playerGuess < randomNumber ) {
-                playerTip = "It's higher than " + playerGuess;
-                {
-        if ( playerGuess > randomNumber ) {
-                playerTip = "It's lower than " + playerGuess;       
-                }
-        if (isNaN (playerGuess)) {
-                playerTip = "Enter a number between 1 & 10";
-                }    
-    }
-    return
+function equalityCheck (){
+	playerGuess = document.getElementById("playerGuessInput").value;
+	playerGuess = Number (playerGuess);
+	if (playerGuess === randomNumber) {
+		currentSecond = 11;
+		playerScore = playerScore + 1;
+		playerTip = "Correct, click to play again";
+		document.getElementById("playButton").value = "Play now";
+		clearTimeout(timerId);
+	} 	else {
+		document.getElementById("playButton").value = "Guess again";
+		if ( playerGuess < randomNumber ) {
+			playerTip = "It's higher than " + playerGuess;
+			}
+		if ( playerGuess > randomNumber ) {
+			playerTip = "It's lower than " + playerGuess;
+			}
+		if (isNaN (playerGuess)) {
+			playerTip = "Enter a number between 1 & 10";	
+			}
+	}
+	return
 }
 
 function secondCountDown(){
@@ -68,8 +69,8 @@ function endGame() {
 }
 
 
-/*function updateHtmlContent () {     // Updates the HTML page
+function updateHtmlContent () {     // Updates the HTML page
     document.getElementById("playerScoreContent").innerHTML = playerScore;
     document.getElementById("computerScoreContent").innerHTML = computerScore;
     document.getElementById("tipContent").innerHTML = playerTip;
-}*/
+}
