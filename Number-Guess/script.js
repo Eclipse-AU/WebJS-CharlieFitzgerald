@@ -45,7 +45,7 @@ function equalityCheck () {     // Equality check TEST
 }
 
 function secondCountDown(){
-        if (currentSecond!=){
+        if (currentSecond!=1){
                 currentSecond = currentSecond - 1;
                 document.getElementById("countDown").innerHTML = currentSecond;
         }else{
@@ -68,8 +68,8 @@ function endGame() {
 }
 
 
-function updateHtmlContent () {     // Updates the HTML page
+/*function updateHtmlContent () {     // Updates the HTML page
     document.getElementById("playerScoreContent").innerHTML = playerScore;
     document.getElementById("computerScoreContent").innerHTML = computerScore;
     document.getElementById("tipContent").innerHTML = playerTip;
-}
+}*/
