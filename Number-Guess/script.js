@@ -44,6 +44,30 @@ function equalityCheck () {     // Equality check TEST
     return
 }
 
+function secondCountDown(){
+        if (currentSecond!=){
+                currentSecond = currentSecond - 1;
+                document.getElementById("countDown").innerHTML = currentSecond;
+        }else{
+                endGame();
+                return
+        }    
+        timerId = setTimeout("secondCountDown()",1000);
+}
+
+function endGame() {
+        computerScore = computerScore + 1;
+        generateRandomNumber ();
+        currentSecond = 11;
+        playerTip = "Too slow, click to play again";
+        updateHtmlContent ();
+        document.getElementById("playButton").value = "Play now";
+        document.getElementById("countDown").innerHTML = 0;
+        updateHtmlContent ();
+        clearTimeout(timerId);
+}
+
+
 function updateHtmlContent () {     // Updates the HTML page
     document.getElementById("playerScoreContent").innerHTML = playerScore;
     document.getElementById("computerScoreContent").innerHTML = computerScore;
