@@ -57,38 +57,38 @@ function equalityCheck (playerChoice, computerChoice)
 	// perform an equality check, update scores and output a string using concatenation that gives user feedback 
 
 	if (playerChoice == "Rock" && computerChoice == 2) {
-		alert("Paper beats Rock! Computer Wins!")
+		playerTip = "Paper beats Rock! Computer Wins!";
 		computerScore = computerScore +1;
 	} else if (playerChoice == "Rock" && computerChoice == 1) {
-		alert("Tie! Go again.")
+		playerTip = "Tie! Go again.";
 	} else if (playerChoice == "Rock" && computerChoice == 3) {
-		alert("Rock beats Scissors! You Win!")
+		playerTip = "Rock beats Scissors! You Win!";
 		playerScore = playerScore +1;
 	} else if (playerChoice == "Paper" && computerChoice == 1) {
-		alert("Paper beats Rock! You Win!")
+		playerTip = "Paper beats Rock! You Win!";
 		playerScore = playerScore +1;
 	} else if (playerChoice == "Paper" && computerChoice == 2) {
-		alert("Tie! Go again.")
+		playerTip = "Tie! Go again.";
 	} else if (playerChoice == "Paper" && computerChoice == 1) {
-		alert("Paper beats Rock! You Win!")
+		playerTip = "Paper beats Rock! You Win!";
 		playerScore = playerScore +1;
 	} else if (playerChoice == "Paper" && compuerChoice == 3) {
-		alert("Scissors beats Paper! Computer Wins!")
+		playerTip = "Scissors beats Paper! Computer Wins!";
 		computerScore = computerScore +1;
 	} else if (playerChoice == "Scissors" && computerChoice == 1) {
-		alert("Rock beats Scissors! Computer Wins")
+		playerTip = "Rock beats Scissors! Computer Wins";
 		computerScore = computerScore +1;
 	} else if (playerChoice == "Scissors" && computerChoice == 2) {
-		alert("Scissors Beats Paper! You Win!")
+		playerTip = "Scissors Beats Paper! You Win!";
 		playerScore = playerScore +1;
 	} else if (playerChoice == "Scissors" && computerChoice == 3) {
-		alert("Tie! Go again.")
+		playerTip = "Tie! Go again.";
 	}
 	
 	//alert ("You Chose: " ++ playerChoice);  //for debug only
 	//alert (computerChoice); //for debug only
 
-	const playerTip = 0;
+	var playerTip = 0;
 	document.getElementById("playerScoreContent").innerHTML = playerScore;
 	document.getElementById("computerScoreContent").innerHTML = computerScore;
 	document.getElementById("tipContent").innerHTML = playerTip;
