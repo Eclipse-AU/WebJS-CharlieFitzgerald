@@ -18,7 +18,7 @@ function gameLoop (playerClicked) {
 	// 1 = Rock, 2 = Paper, 3 = Scissors
 	// convert random number to a choice so you can both equality check and use in the ouput string it should be stored in a const 
 	
-	if (randomNumber == 1) { // Alert "1 is Rock" when random number outputs 1
+	/*if (randomNumber == 1) { // Purely for testing; Alert "1 is Rock" when random number outputs 1
 		alert("1 is Rock")
 	}
 	
@@ -28,6 +28,18 @@ function gameLoop (playerClicked) {
 	
 	if (randomNumber == 3) {
 		alert("3 is Scissors")
+	}*/
+
+	if (randomNumber == 1) {
+		randomNumber == "Rock";
+	}
+	
+	if (randomNumber == 2) {
+		randomNumber == "Paper";
+	}
+	
+	if (randomNumber == 3) {
+		randomNumber == "Scissors";
 	}
 
 	const computerChoice = randomNumber //for debug only
@@ -40,13 +52,41 @@ function generateRandomNumber () {
 }
 
 
-function equalityCheck (playerChoice, computerChoice){
+function equalityCheck (playerChoice, computerChoice) 
+{
 	// perform an equality check, update scores and output a string using concatenation that gives user feedback 
 
-
+	if (playerChoice == "Rock" && computerChoice == 2) {
+		alert("Paper beats Rock! Computer Wins!")
+		computerScore = computerScore +1;
+	} else if (playerChoice == "Rock" && computerChoice == 1) {
+		alert("Tie! Go again.")
+	} else if (playerChoice == "Rock" && computerChoice == 3) {
+		alert("Rock beats Scissors! You Win!")
+		playerScore = playerScore +1;
+	} else if (playerChoice == "Paper" && computerChoice == 1) {
+		alert("Paper beats Rock! You Win!")
+		playerScore = playerScore +1;
+	} else if (playerChoice == "Paper" && computerChoice == 2) {
+		alert("Tie! Go again.")
+	} else if (playerChoice == "Paper" && computerChoice == 1) {
+		alert("Paper beats Rock! You Win!")
+		playerScore = playerScore +1;
+	} else if (playerChoice == "Paper" && compuerChoice == 3) {
+		alert("Scissors beats Paper! Computer Wins!")
+		computerScore = computerScore +1;
+	} else if (playerChoice == "Scissors" && computerChoice == 1) {
+		alert("Rock beats Scissors! Computer Wins")
+		computerScore = computerScore +1;
+	} else if (playerChoice == "Scissors" && computerChoice == 2) {
+		alert("Scissors Beats Paper! You Win!")
+		playerScore = playerScore +1;
+	} else if (playerChoice == "Scissors" && computerChoice == 3) {
+		alert("Tie! Go again.")
+	}
 	
-	alert (playerChoice);  //for debug only
-	alert (computerChoice); //for debug only
+	//alert ("You Chose: " ++ playerChoice);  //for debug only
+	//alert (computerChoice); //for debug only
 
 	const playerTip = 0;
 	document.getElementById("playerScoreContent").innerHTML = playerScore;
