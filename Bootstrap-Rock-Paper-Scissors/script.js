@@ -92,5 +92,5 @@ function equalityCheck (playerChoice, computerChoice)
 
 	document.getElementById("playerScoreContent").innerHTML = playerScore;
 	document.getElementById("computerScoreContent").innerHTML = computerScore;
-	document.getElementById("playerTipContent").innerHTML = playerTip;
+	document.getElementById("tipContent").innerHTML = playerTip;
 }
