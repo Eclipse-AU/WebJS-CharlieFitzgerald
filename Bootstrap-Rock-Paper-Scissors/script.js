@@ -18,7 +18,7 @@ function gameLoop (playerClicked) {
 	// 1 = Rock, 2 = Paper, 3 = Scissors
 	// convert random number to a choice so you can both equality check and use in the ouput string it should be stored in a const 
 	
-	if (randomNumber == 1) {
+	if (randomNumber == 1) { // Alert "1 is Rock" when random number outputs 1
 		alert("1 is Rock")
 	}
 	
