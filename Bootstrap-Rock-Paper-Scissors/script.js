@@ -10,8 +10,8 @@
 
 
 
-let playerScore;
-let computerScore;
+let playerScore = 0;
+let computerScore = 0;
 
 function gameLoop (playerClicked) {
 	const randomNumber = generateRandomNumber() // generateRandomNumber will generate a random number
@@ -56,40 +56,41 @@ function equalityCheck (playerChoice, computerChoice)
 {
 	// perform an equality check, update scores and output a string using concatenation that gives user feedback 
 
+	let playerTip = 0;
+
 	if (playerChoice == "Rock" && computerChoice == 2) {
-		playerTip = "Paper beats Rock! Computer Wins!";
+		playerTip = "Paper beats Rock! Computer Wins!"
 		computerScore = computerScore +1;
 	} else if (playerChoice == "Rock" && computerChoice == 1) {
-		playerTip = "Tie! Go again.";
+		playerTip = "Tie! Go again."
 	} else if (playerChoice == "Rock" && computerChoice == 3) {
-		playerTip = "Rock beats Scissors! You Win!";
+		playerTip = "Rock beats Scissors! You Win!"
 		playerScore = playerScore +1;
 	} else if (playerChoice == "Paper" && computerChoice == 1) {
-		playerTip = "Paper beats Rock! You Win!";
+		playerTip = "Paper beats Rock! You Win!"
 		playerScore = playerScore +1;
 	} else if (playerChoice == "Paper" && computerChoice == 2) {
-		playerTip = "Tie! Go again.";
+		playerTip = "Tie! Go again."
 	} else if (playerChoice == "Paper" && computerChoice == 1) {
-		playerTip = "Paper beats Rock! You Win!";
+		playerTip = "Paper beats Rock! You Win!"
 		playerScore = playerScore +1;
 	} else if (playerChoice == "Paper" && compuerChoice == 3) {
-		playerTip = "Scissors beats Paper! Computer Wins!";
+		playerTip = "Scissors beats Paper! Computer Wins!"
 		computerScore = computerScore +1;
 	} else if (playerChoice == "Scissors" && computerChoice == 1) {
-		playerTip = "Rock beats Scissors! Computer Wins";
+		playerTip = "Rock beats Scissors! Computer Wins"
 		computerScore = computerScore +1;
 	} else if (playerChoice == "Scissors" && computerChoice == 2) {
-		playerTip = "Scissors Beats Paper! You Win!";
+		playerTip = "Scissors Beats Paper! You Win!"
 		playerScore = playerScore +1;
 	} else if (playerChoice == "Scissors" && computerChoice == 3) {
-		playerTip = "Tie! Go again.";
+		playerTip = "Tie! Go again."
 	}
 	
 	//alert ("You Chose: " ++ playerChoice);  //for debug only
 	//alert (computerChoice); //for debug only
 
-	var playerTip = 0;
 	document.getElementById("playerScoreContent").innerHTML = playerScore;
 	document.getElementById("computerScoreContent").innerHTML = computerScore;
-	document.getElementById("tipContent").innerHTML = playerTip;
+	document.getElementById("playerTipContent").innerHTML = playerTip;
 }
