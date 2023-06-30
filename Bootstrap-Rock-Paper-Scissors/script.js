@@ -22,12 +22,12 @@ function gameLoop (playerClicked) {
 		alert("1 is Rock")
  }
 	
-		if (randomNumber == 2) {
-			alert("2 is Paper")
+	if (randomNumber == 2) {
+		alert("2 is Paper")
  }
 	
-		if (randomNumber == 3) {
-			alert("3 is Scissors")
+	if (randomNumber == 3) {
+		alert("3 is Scissors")
  }
 
 	const computerChoice = randomNumber //for debug only
