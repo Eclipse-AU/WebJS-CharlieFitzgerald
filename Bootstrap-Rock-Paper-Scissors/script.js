@@ -18,7 +18,17 @@ function gameLoop (playerClicked) {
 	// 1 = Rock, 2 = Paper, 3 = Scissors
 	// convert random number to a choice so you can both equality check and use in the ouput string it should be stored in a const 
 	
+	if (randomNumber == 1) {
+		alert("1 is Rock")
+	}
 	
+	if (randomNumber == 2) {
+		alert("2 is Paper")
+	}
+	
+	if (randomNumber == 3) {
+		alert("3 is Scissors")
+	}
 
 	const computerChoice = randomNumber //for debug only
 	equalityCheck (playerClicked, computerChoice);
