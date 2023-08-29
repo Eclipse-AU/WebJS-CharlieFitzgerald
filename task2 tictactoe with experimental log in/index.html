@@ -1,0 +1,34 @@
+<!-- login page -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tic Tac Toe</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	  </head>
+	  <style>
+		h1 {text-align: center;}
+		h2 {text-align: center;}
+		
+		.h2-align {
+		 font-size: medium;
+		}
+		
+		.center-block {
+ 		 display: block;
+  		 margin-right: auto;
+  		 margin-left: auto;
+		 width: 300px; /* the size */
+		}
+		</style>
+	  <body>
+		<h1>randomNumberGenerator TicTacToe</h1>
+		<h2>Please Log in</h2>
+		<h2>Username <input class="h2-align" type="text" id="usernameInput"/></h2>
+		<h2>Password <input class="h2-align" type="password" id="passwordInput"/></h2>
+		<input id="logInButtonHTML" class="center-block" type="button" value="Log In" onclick="logInButton();"></input>
+		<script src="script.js"></script>
+		</body>
+		<source src="index.html"></source>
+		</html>
