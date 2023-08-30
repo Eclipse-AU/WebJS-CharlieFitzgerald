@@ -79,17 +79,19 @@ function gameLoop1 (playerSquareClick) {
 	gameIsRunning = true;
 }
 
-// main gameloop that now handles all the player and rng turns
-function gameLoop1 (playerSquareClick) {
-	document.getElementById(playerSquareClick).innerHTML = "X";
-	gridArray[document.getElementById(playerSquareClick).value]='X';
-	lineCheck();
-	gameLoop(playerSquareClick);
-	document.getElementById(playerSquareClick).disabled = true;
-	equalityCheck (playerSquareClick);
-	console.log("gameLoop1 player clicked ("+ playerSquareClick +")");
-	allowRandomNumber = true; // Enable random number generation when a square is clicked (chat gpt suggestion)
-	gameIsRunning = true;
+// the log in button that checks the login details and lets the user in
+function logInButton () {
+	logInButtonHTML = document.getElementById("logInButton");
+	usernameInput = document.getElementById("usernameInput").value;
+	passwordInput = document.getElementById("passwordInput").value;
+	if (usernameInput == "charlie" && passwordInput == "test") {
+		alert("log in successful")
+		console.log("log in successful, loading main.html...")
+		wait(1000);
+		change_page();
+	} else if (usernameInput != "charlie" && passwordInput != "test") {
+		alert("incorrect log in")
+	}
 }
 
 // changes page (code taken from https://stackoverflow.com/questions/24903148/navigate-between-html-files)
