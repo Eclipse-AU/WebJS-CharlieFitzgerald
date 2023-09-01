@@ -1,4 +1,4 @@
-# 2024-WebJS-CharlieFitzgerald
+# WebJS-CharlieFitzgerald
 
 ## Charlie's repository for WebJS development projects in Software Design and Development.
 
